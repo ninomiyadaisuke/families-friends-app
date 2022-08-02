@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 const Sample: NextPage = () => {
-  return <div>hello worldeeee</div>;
+  return <div></div>;
 };
 
 export default Sample;
