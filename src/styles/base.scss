@@ -6,9 +6,8 @@ html {
 
 body {
   color: $main;
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Helvetica Neue', HelveticaNeue, YuGothic,
-    'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo, sans-serif;
-  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
   font-feature-settings: 'palt';
   letter-spacing: 0.1em;
   margin: 0;
@@ -162,25 +161,55 @@ h6 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   line-height: 1.7;
 }
 
 a {
-  color: $link-main;
+  color: $blue;
   transition: color 0.35s ease;
   &:hover {
-    color: $link-dark;
+    color: $blue;
   }
   &:visited {
-    color: $link-main;
+    color: $blue;
   }
 }
 
 b,
 strong,
 .font_bold {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI semibold', 'Helvetica Neue', HelveticaNeue, YuGothic,
-    'Yu Gothic', 'Segoe UI', Verdana, Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1,
+li {
+  font-size: 24px;
+}
+li {
+  list-style:none
+}
+
+label,
+h2,
+h3 {
+  font-size: 16px;
+}
+
+@include mq('md') {
+  p,
+  li {
+    font-size: 24px;
+  }
+  label,
+  h3 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h1 {
+    font-size: 40px;
+  }
 }
