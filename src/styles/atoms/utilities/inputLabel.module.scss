@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.label {
+  display: flex;
+  label {
+    margin-right: 10px;
+  }
+  &__badge {
+    display: flex;
+    align-items: center;
+  }
+}
