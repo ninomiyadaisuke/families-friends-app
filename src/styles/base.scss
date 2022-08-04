@@ -97,6 +97,10 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
+  &::placeholder {
+    color: $text-placeholder;
+    font-size: 16px;
+  }
 }
 
 input[type='checkbox'],
@@ -211,5 +215,11 @@ h3 {
   }
   h1 {
     font-size: 40px;
+  }
+  input {
+    &::placeholder {
+      color: $text-placeholder;
+      font-size: 24px;
+    }
   }
 }
