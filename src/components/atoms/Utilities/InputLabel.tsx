@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { RequiredBadge } from 'components/atoms/Utilities';
 
 import styles from 'styles/atoms/utilities/inputLabel.module.scss';
@@ -8,7 +8,7 @@ type Props = {
   required: boolean;
 };
 
-const InputLabel: FC<Props> = memo((props) => {
+const InputLabel: FC<Props> = (props) => {
   const { label, required } = props;
   return (
     <div className={styles.label}>
@@ -20,6 +20,6 @@ const InputLabel: FC<Props> = memo((props) => {
       )}
     </div>
   );
-});
+};
 
 export default InputLabel;
