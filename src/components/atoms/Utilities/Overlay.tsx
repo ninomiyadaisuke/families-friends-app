@@ -10,7 +10,7 @@ type Props = {
 
 const Overlay: FC<Props> = (props) => {
   const { children } = props;
-  const [showModal, setShowModal] = useAtom(modalContext);
+  const [, setShowModal] = useAtom(modalContext);
 
   return (
     <div className={styles.overlay} onClick={() => setShowModal(false)}>
