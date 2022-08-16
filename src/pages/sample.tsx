@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
 import { Overlay } from 'components/atoms/Utilities';
+import { XButton } from 'components/atoms/Button';
 
 const Sample: NextPage = () => {
   return (
     <div>
-      <Overlay />
+      {/* <Overlay /> */}
+      <XButton type="modal" />
     </div>
   );
 };

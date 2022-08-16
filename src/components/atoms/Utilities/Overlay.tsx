@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { useAtom } from 'jotai';
 
-import { modalContext } from 'contexts/modalContext';
+import { modalContext } from 'contexts/toggleContext';
 import styles from 'styles/atoms/utilities/overlay.module.scss';
 
 type Props = {
