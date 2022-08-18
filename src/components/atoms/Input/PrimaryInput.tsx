@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { useFormContext, Path, FieldValues } from 'react-hook-form';
+import { useFormContext, FieldValues } from 'react-hook-form';
 import { RequiredBadge } from 'components/atoms/Utilities';
 import { FieldByType } from 'types/fieldByType';
 
