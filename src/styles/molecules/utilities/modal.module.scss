@@ -1,0 +1,59 @@
+@import '../../variables.scss';
+
+.modal {
+  display: flex;
+  width: 95%;
+  height: 162px;
+  background-color: white;
+  border: solid 1px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 21;
+  &__container {
+    width: 292px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+  }
+  &__text {
+    font-size: 20px;
+    text-align: center;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    gap: 57px;
+    &_size {
+      width: 112px;
+      height: 45px;
+    }
+  }
+  &__cancel {
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+  @include mq('md') {
+    width: 800px;
+    height: 380px;
+    &__text {
+      font-size: 32px;
+    }
+    &__container {
+      width: 432px;
+      height: 188px;
+    }
+    &__button_size {
+      width: 162px;
+      height: 65px;
+    }
+    &__cancel {
+      top: 10px;
+      right: 10px;
+    }
+  }
+}

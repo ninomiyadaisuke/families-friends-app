@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { useAtom } from 'jotai';
+import { useSetAtom } from 'jotai';
 
 import { modalContext, listContext, drawerContext } from 'contexts/toggleContext';
 
@@ -12,9 +12,18 @@ type Props = {
 const XButton: FC<Props> = (props) => {
   const { type } = props;
 
-  const contextType = type === 'modal' ? modalContext : type === 'drawer' ? drawerContext : listContext;
+  const contextType = (() => {
+    switch (type) {
+      case 'modal':
+        return modalContext;
+      case 'list':
+        return listContext;
+      case 'drawer':
+        return drawerContext;
+    }
+  })();
 
-  const [, setToggle] = useAtom(contextType);
+  const setToggle = useSetAtom(contextType);
 
   return <div className={styles.button} onClick={() => setToggle(false)} />;
 };

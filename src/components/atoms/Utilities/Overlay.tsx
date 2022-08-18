@@ -1,22 +1,19 @@
-import { FC, ReactNode } from 'react';
-import { useAtom } from 'jotai';
+import { FC } from 'react';
+import { useSetAtom } from 'jotai';
 
-import { modalContext } from 'contexts/toggleContext';
+import { modalContext, listContext } from 'contexts/toggleContext';
 import styles from 'styles/atoms/utilities/overlay.module.scss';
 
 type Props = {
-  children?: ReactNode;
+  type: 'modal' | 'list';
 };
 
 const Overlay: FC<Props> = (props) => {
-  const { children } = props;
-  const [, setShowModal] = useAtom(modalContext);
+  const { type } = props;
+  const contextType = type === 'modal' ? modalContext : listContext;
+  const setToggle = useSetAtom(contextType);
 
-  return (
-    <div className={styles.overlay} onClick={() => setShowModal(false)}>
-      {children}
-    </div>
-  );
+  return <div className={styles.overlay} onClick={() => setToggle(false)} />;
 };
 
 export default Overlay;
